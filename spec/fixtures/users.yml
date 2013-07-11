@@ -9,7 +9,7 @@ user1:
 
 user2:
   id: 2
-  name: 'xxx'
+  name: 'Steven'
   team_id: 1
   current_tacopoints: 0
   total_tacopoints: 0

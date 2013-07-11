@@ -5,6 +5,7 @@ ruby '2.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
+gem "json_spec"
 gem 'haml_assets'
 gem 'haml-rails'
 gem 'pg'
