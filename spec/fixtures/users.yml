@@ -1,0 +1,16 @@
+---
+user1:
+  id: 1
+  name: 'iwano'
+  team_id: 1
+  current_tacopoints: 0
+  total_tacopoints: 0
+  sponsor_count: 0
+
+user2:
+  id: 2
+  name: 'xxx'
+  team_id: 1
+  current_tacopoints: 0
+  total_tacopoints: 0
+  sponsor_count: 0
