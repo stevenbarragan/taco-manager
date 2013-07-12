@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'data_migrate'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem "json_spec"
