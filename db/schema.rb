@@ -11,14 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130712011747) do
+ActiveRecord::Schema.define(version: 20130712033500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "taco_points", force: true do |t|
     t.integer "user_id"
+    t.integer "taco_rule_id"
+  end
+
+  create_table "taco_rules", force: true do |t|
     t.string  "description"
+    t.integer "team_id"
   end
 
   create_table "teams", force: true do |t|
@@ -29,8 +34,8 @@ ActiveRecord::Schema.define(version: 20130712011747) do
     t.string  "name"
     t.integer "team_id"
     t.integer "current_tacopoints", default: 0
-    t.integer "total_tacopoints",   default: 0
     t.integer "sponsor_count",      default: 0
+    t.integer "taco_points_count",  default: 0, null: false
   end
 
 end

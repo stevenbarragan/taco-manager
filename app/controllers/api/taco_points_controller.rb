@@ -12,6 +12,6 @@ class Api::TacoPointsController < Api::BaseController
   private
 
   def taco_point_params
-    params.require(:taco_point).permit(:user_id, :description)
+    params.require(:taco_point).permit(:user_id, :taco_rule_id)
   end
 end

@@ -15,7 +15,7 @@ describe Api::UsersController do
             "name": "Eddy",
             "team_id": 1,
             "current_tacopoints": 0,
-            "total_tacopoints": 0,
+            "taco_points_count": 0,
             "sponsor_count": 0
           }
         )

@@ -2,9 +2,9 @@
 taco_point1:
   id: 1
   user_id: 1
-  description: 'Yolo Driven Development'
+  taco_rule_id: 1
 
 taco_point2:
   id: 2
   user_id: 2
-  description: 'Console log Driven Development'
+  taco_rule_id: 2

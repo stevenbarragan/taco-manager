@@ -2,11 +2,11 @@ require "spec_helper"
 
 describe Api::TacoPointsController do
   render_views
-
+  fixtures(:taco_points)
   let(:user) { User.find(1) }
 
   describe :create do
-    valid_arguments = { user_id: "1", description: "Yolo Driven Development" }
+    valid_arguments = { user_id: "1", taco_rule_id: 1 }
 
     it "should create a new taco_point for the user indicated" do
       expect do
@@ -18,7 +18,7 @@ describe Api::TacoPointsController do
       expected_response = %(
         {
           "user_id": 1,
-          "description": "Yolo Driven Development"
+          "taco_rule_id": 1
         }
       )
       post :create, taco_point: valid_arguments

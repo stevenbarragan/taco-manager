@@ -1,0 +1,10 @@
+---
+taco_rule1:
+  id: 1
+  team_id: 1
+  description: "Yolo Driven Development"
+
+taco_rule2:
+  id: 2
+  team_id: 2
+  description: "Console log"
