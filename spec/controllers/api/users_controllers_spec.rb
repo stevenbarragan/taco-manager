@@ -7,23 +7,21 @@ describe Api::UsersController do
   let(:user2) { User.find(2) }
 
   describe :create do
-    context "with valid arguments" do
-      valid_arguments = { name: "Eddy", team_id: 1 }
+    valid_arguments = { name: "Eddy", team_id: 1 }
 
-      it "should create a new user and respond with the record" do
-        expected_response = %(
-            {
-              "name": "Eddy",
-              "team_id": 1,
-              "current_tacopoints": 0,
-              "total_tacopoints": 0,
-              "sponsor_count": 0
-            }
-          )
-        post :create, user: valid_arguments
-        expect(response.body).to be_json_eql expected_response
-        User.count.should be 3
-      end
+    it "should create a new user and respond with the record" do
+      expected_response = %(
+          {
+            "name": "Eddy",
+            "team_id": 1,
+            "current_tacopoints": 0,
+            "total_tacopoints": 0,
+            "sponsor_count": 0
+          }
+        )
+      post :create, user: valid_arguments
+      expect(response.body).to be_json_eql expected_response
+      User.count.should be 3
     end
   end
 

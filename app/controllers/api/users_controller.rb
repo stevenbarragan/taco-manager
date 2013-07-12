@@ -18,7 +18,8 @@ class Api::UsersController < Api::BaseController
   end
 
   def update
-    @user = User.find(params[:id]).update user_params
+    User.find(params[:id]).update user_params
+    render status: :ok, nothing: true
   end
 
   private

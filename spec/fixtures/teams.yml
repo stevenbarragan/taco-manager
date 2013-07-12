@@ -1,0 +1,8 @@
+---
+team1:
+  id: 1
+  name: 'Spree Team'
+
+team2:
+  id: 2
+  name: 'Retrospectus Team'
