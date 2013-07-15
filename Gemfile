@@ -4,8 +4,9 @@ ruby '2.0.0'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'data_migrate'
+gem 'ember-rails'
 gem 'jbuilder', '~> 1.2'
-gem 'jquery-rails'
+gem 'jquery-rails', '~>2.2.0'
 gem "json_spec"
 gem 'haml_assets'
 gem 'haml-rails'
