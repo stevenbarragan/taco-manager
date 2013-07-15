@@ -17,6 +17,7 @@
 //= require ember-data
 //= require_self
 //= require taco_manager
+//= require bootstrap
 
 TacoManager = Ember.Application.create({LOG_TRANSITIONS: true});
 
