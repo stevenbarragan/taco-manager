@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
 
 	belongs_to :team
 	has_many :taco_points
+
+  delegate :team_name, to: :team, allow_nil: nil
 end
