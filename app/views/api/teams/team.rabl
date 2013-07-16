@@ -1,5 +1,9 @@
-object @team
-
 attributes :id, :name
 
-child(:taco_rules) { attributes :description }
+node(:taco_rules_ids) do |t|
+  t.taco_rules.map{ |r| r.id  }
+end
+
+node(:user_ids) do |t|
+  t.users.map{ |r| r.id  }
+end

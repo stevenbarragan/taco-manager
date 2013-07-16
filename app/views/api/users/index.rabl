@@ -1,4 +1,4 @@
 object false
 child @users => :users do
-	extends 'api/users/create'
+	extends 'api/users/user'
 end

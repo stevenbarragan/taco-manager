@@ -5,9 +5,13 @@ TacoManager.Router.map ->
       path: ':team_id'
 
 TacoManager.UsersRoute = Ember.Route.extend(model: ->
+  TacoManager.Team.find()
   TacoManager.User.find()
+
 )
 
 TacoManager.TeamsRoute = Ember.Route.extend(model: ->
   TacoManager.Team.find()
 )
+
+
