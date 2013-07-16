@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20130712033500) do
 
   create_table "teams", force: true do |t|
     t.string "name"
+    t.text   "rules"
   end
 
   create_table "users", force: true do |t|

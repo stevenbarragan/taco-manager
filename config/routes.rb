@@ -10,5 +10,7 @@ TacoManager::Application.routes.draw do
     root to: 'home#show'
   end
 
+  get '/a', to: 'home#angular'
+
   root to: 'home#show'
 end
