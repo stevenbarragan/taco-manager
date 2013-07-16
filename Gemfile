@@ -5,6 +5,8 @@ ruby '2.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'data_migrate'
 gem 'ember-rails'
+gem 'ember-source', '1.0.0.rc6'
+gem 'handlebars-source', '1.0.0.rc4'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails', '~>2.2.0'
 gem "json_spec"

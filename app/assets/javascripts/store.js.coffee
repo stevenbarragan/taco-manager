@@ -1,4 +1,8 @@
 TacoManager.Store = DS.Store.extend(
+  adapter: DS.RESTAdapter.create(
+    namespace: "api"
+  )
   revision: 12
-  adapter: DS.RESTAdapter.extend(url: "http://localhost:3000/api")
 )
+
+TacoManager.Store

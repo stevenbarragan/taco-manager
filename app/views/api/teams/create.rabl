@@ -1,3 +1,3 @@
-object @team
-
-attributes :id, :name
+child @team => :team do
+  attributes :id, :name
+end

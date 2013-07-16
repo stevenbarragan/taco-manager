@@ -55,7 +55,7 @@ GEM
       execjs (>= 1.2)
       handlebars-source
       railties (>= 3.1)
-    ember-source (0.0.9)
+    ember-source (1.0.0.rc6)
       handlebars-source (= 1.0.0.rc4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -185,12 +185,14 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   data_migrate
   ember-rails
+  ember-source (= 1.0.0.rc6)
   factory_girl_rails
   ffaker
   fivemat
   fixture_builder
   haml-rails
   haml_assets
+  handlebars-source (= 1.0.0.rc4)
   jbuilder (~> 1.2)
   jquery-rails (~> 2.2.0)
   json_spec
