@@ -1,5 +1,27 @@
-%ul
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Team
+      %th
+        Current Tacopoints
+      %th
+        Total Tacopoints
+      %th
+        Sponsored
   {{#each model}}
-  %li
-    {{name}}
+  %tr
+    %td
+      {{name}}
+    %td
+      {{team_id}}
+    %td
+      {{current_tacopoints}}
+    %td
+      {{taco_points_count}}
+    %td
+      {{sponsor_count}}
+
   {{/each}}

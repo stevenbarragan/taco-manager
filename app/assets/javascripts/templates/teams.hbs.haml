@@ -1,5 +1,9 @@
-%ul
-  {{#each model}}
-  %li
-    {{name}}
-  {{/each}}
+%form.form-inline
+  {{view Ember.TextField id="new-team-name" placeholder="Team's name" valueBinding="newName" action="createTeam"}}
+  <button class='btn' id='new-team-btn' {{action createTeam}}> New Team</button>
+%section#teams-list.span3
+  %ul.nav.nav-tabs.nav-stacked
+    {{#each model}}
+    %li
+      {{#linkTo 'team' this}}{{name}}{{/linkTo}}
+    {{/each}}

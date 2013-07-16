@@ -1,10 +1,12 @@
-%h1
-  Taco Manager
+%section.container#main
+  .navbar
+    .navbar-inner
+      {{#linkTo 'index' classNames="brand"}}Taco Manager{{/linkTo}}
+      %ul.nav
+        %li
+          {{#linkTo 'users'}}Users{{/linkTo}}
+        %li
+          {{#linkTo 'teams'}}Teams{{/linkTo}}
 
-{{outlet}}
+  {{outlet}}
 
-%ul
-  %li
-    {{#linkTo 'users'}}Users{{/linkTo}}
-  %li
-    {{#linkTo 'teams'}}Teams{{/linkTo}}
