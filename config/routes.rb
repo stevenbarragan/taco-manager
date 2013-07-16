@@ -6,5 +6,9 @@ TacoManager::Application.routes.draw do
     resources :taco_rules
   end
 
+  namespace :e do
+    root to: 'home#show'
+  end
+
   root to: 'home#show'
 end
