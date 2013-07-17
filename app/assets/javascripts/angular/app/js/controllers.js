@@ -2,10 +2,10 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
-
+angular.module('tacosApp.controllers', []).
+  controller('UserCtrl', [function() {
+    alert( 'hi')
   }])
   .controller('MyCtrl2', [function() {
-
+    alert( 'hi')
   }]);
