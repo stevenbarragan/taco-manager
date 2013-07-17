@@ -1,4 +1,3 @@
-object false
-child @users => :users do
-	extends 'api/users/user'
-end
+object @users
+
+attributes :id, :name, :current_tacopoints, :taco_points_count, :sponsor_count
