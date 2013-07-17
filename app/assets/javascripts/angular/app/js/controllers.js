@@ -1,11 +1,7 @@
 'use strict';
 
 /* Controllers */
-
 angular.module('tacosApp.controllers', []).
-  controller('UserCtrl', [function() {
-    alert( 'hi')
+  controller('UserCtrl', ['$scope' , 'Users', function($scope , Users) {
+    $scope.users = Users.get()
   }])
-  .controller('MyCtrl2', [function() {
-    alert( 'hi')
-  }]);

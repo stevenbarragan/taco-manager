@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require ./angular/app/lib/angular/angular.js
+//= require ./angular/app/lib/angular/angular-resource.js
 //= require ./angular/config/global_variables.js
 //= require_tree ./angular/app/js/.
