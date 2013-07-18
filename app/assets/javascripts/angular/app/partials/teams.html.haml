@@ -6,6 +6,6 @@
       {{team.name}}
 
 New team
-%form{"name" => 'team', 'ng-submit' => 'submit()'}
+%form{"name" => 'teamForm', 'ng-submit' => 'submit(team)'}
   %input{ 'name' => 'input', 'ng-model' => 'team.name', 'required' => true}
   %input{type: 'submit'}
