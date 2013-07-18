@@ -1,6 +1,12 @@
+%a{ href: '/a/#/users/new'} New
 %table
   %tr
     %th Name
   %tr{"ng-repeat" => 'user in users'}
     %td
       {{user.name}}
+
+%form{"name" => 'user', 'ng-submit' => 'submit()'}
+  %input{ 'name' => 'input', 'ng-model' => 'name', 'required' => true}
+  %input{type: 'submit'}
+  {{name}}

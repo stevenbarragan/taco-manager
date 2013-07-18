@@ -4,3 +4,8 @@
   %tr{"ng-repeat" => 'team in teams'}
     %td
       {{team.name}}
+
+New team
+%form{"name" => 'team', 'ng-submit' => 'submit()'}
+  %input{ 'name' => 'input', 'ng-model' => 'team.name', 'required' => true}
+  %input{type: 'submit'}
