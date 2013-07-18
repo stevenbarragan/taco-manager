@@ -2,7 +2,7 @@
 
 /* Controllers */
 angular.module('tacosApp.controllers', []).
-  controller('UserCtrl', ['$scope', '$routeParams', 'Users', 'Teams', function($scope, $routeParams, Users, Teams) {;
+  controller('UserCtrl', ['$scope', '$routeParams', 'Users', 'Teams', function($scope, $routeParams, Users, Teams) {
   $scope.users = Users.query()
   $scope.teams = Teams.query()
   $scope.submit = function(user){
@@ -11,9 +11,9 @@ angular.module('tacosApp.controllers', []).
       $scope.users.push( resource.user )
     })
   }
-}]).
-  controller('TeamCtrl', ['$scope' , 'Teams', 'TacoRules', function($scope , Teams, TacoRules) {
-    $scope.teams = Teams.query();
+  }]).
+  controller('TeamCtrl', ['$scope','Teams', 'TacoRules', function($scope, Teams, TacoRules) {
+    app.teams = $scope.teams = Teams.query();
     $scope.submit = function(team){
       Teams.save(team, function(resource){
         $scope.teams.push(resource.team);
@@ -23,10 +23,23 @@ angular.module('tacosApp.controllers', []).
       $scope.team = team;
     };
     $scope.submit_rule = function(rule){
-      console.log( rule )
       rule.team_id = $scope.team.id
       TacoRules.save(rule, function(rule){
         $scope.team.taco_rules.push( rule )
-      })
+      }) }
+  }]).
+  controller('TeamDetailCtrl', ['$scope', 'routeParams', 'Teams', 'TacoRules', function($scope, $routeParams, Teams, TacoRules){
+    if( app.teams == undefined ){
+      app.teams = $scope.teams = Teams.query(function(){
+        var team = app.teams.filter(function(team){
+            if(team.id == $routeParams.team_id){return true}
+          })
+        $scope.team = team[0];
+      });
+    }else{
+      team = app.teams.filter(function(team){
+          if(team.id == $routeParams.team_id){return true}
+        })
+      $scope.team = team[0];
     }
-}])
+  }])

@@ -1,7 +1,7 @@
 %span.span2
   %ul{ "class" => 'nav nav-tabs nav-stacked'}
     %li{"ng-repeat" => 'team in teams'}
-      %a{'ng-click' => 'show_team(team)'}
+      %a{'ng-href' => '#/teams/{{team.id}}'}
         {{team.name}}
   %form{"name" => 'teamForm', 'ng-submit' => 'submit(new_team)'}
     %input{'type' => 'text', 'ng-model' => 'new_team.name', 'placeholder' => 'New Team', 'required' => true}
