@@ -1,4 +1,6 @@
 class Api::UsersController < Api::BaseController
+  skip_before_filter :verify_authenticity_token 
+
   def create
     @user = User.create! user_params
     render status: :created
