@@ -1,11 +1,18 @@
-%table
-  %tr
-    %th Name
-  %tr{"ng-repeat" => 'team in teams'}
-    %td
-      {{team.name}}
+%span.span2
+  %ul{ "class" => 'nav nav-tabs nav-stacked'}
+    %li{"ng-repeat" => 'team in teams'}
+      %a{'ng-click' => 'show_team(team)'}
+        {{team.name}}
+  %form{"name" => 'teamForm', 'ng-submit' => 'submit(new_team)'}
+    %input{'type' => 'text', 'ng-model' => 'new_team.name', 'placeholder' => 'New Team', 'required' => true}
+    %input.btn.btn-primary{type: 'submit', value: 'Add'}
+%span.span8
+  .hero-unit{'ng-hide' => '!team'}
+    %h1 {{team.name}}
+    %ul
+      %li{'ng-repeat' => 'rule in team.taco_rules'}
+        {{rule.description}}
+    %form{"name" => 'tacoRuleForm', 'ng-submit' => 'submit_rule(new_rule);new_rule.description=""'}
+      %input{'type' => 'text', 'ng-model' => 'new_rule.description', 'required' => true}
+      %input.btn{'type' => 'submit', 'value'  => 'Add'}
 
-New team
-%form{"name" => 'teamForm', 'ng-submit' => 'submit(team)'}
-  %input{ 'name' => 'input', 'ng-model' => 'team.name', 'required' => true}
-  %input{type: 'submit'}

@@ -1,4 +1,6 @@
 class Api::TacoRulesController < Api::BaseController
+  skip_before_filter :verify_authenticity_token 
+
   def create
     @taco_rule = TacoRule.create! taco_rules_params
   end

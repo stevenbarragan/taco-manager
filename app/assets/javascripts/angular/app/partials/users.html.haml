@@ -1,5 +1,4 @@
-%a{ href: '/a/#/users/new'} New
-%table
+%table.table.table-striped
   %tr
     %th Name
   %tr{"ng-repeat" => 'user in users'}
@@ -7,6 +6,6 @@
       {{user.name}}
 
 %form{"name" => 'user', 'ng-submit' => 'submit(user)'}
-  %input{ 'name' => 'input', 'ng-model' => 'user.name', 'required' => true}
-  %select{ 'ng-model' => 'user.team_id', 'required' => true, 'ng-options' => 't.id as t.name for t in teams'}
-  %input{type: 'submit'}
+  %input{'type' => 'text', 'ng-model' => 'user.name', 'required' => true,'placeholder' => 'New User'}
+  %select{ 'ng-model' => 'user.team_id', 'required' => true, 'ng-options' => 't.id as t.name for t in teams' }
+  %input.btn.btn-primary{type: 'submit', value: 'Add'}

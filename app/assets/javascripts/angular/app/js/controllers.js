@@ -12,11 +12,21 @@ angular.module('tacosApp.controllers', []).
     })
   }
 }]).
-  controller('TeamCtrl', ['$scope' , 'Teams', function($scope , Teams) {
+  controller('TeamCtrl', ['$scope' , 'Teams', 'TacoRules', function($scope , Teams, TacoRules) {
     $scope.teams = Teams.query();
     $scope.submit = function(team){
       Teams.save(team, function(resource){
-        $scope.teams.push(resource.team)
+        $scope.teams.push(resource.team);
+      })
+    };
+    $scope.show_team = function(team){
+      $scope.team = team;
+    };
+    $scope.submit_rule = function(rule){
+      console.log( rule )
+      rule.team_id = $scope.team.id
+      TacoRules.save(rule, function(rule){
+        $scope.team.taco_rules.push( rule )
       })
     }
 }])

@@ -1,3 +1,6 @@
 object @team
 
-extends 'api/teams/create'
+attributes :id, :name
+
+child(:taco_rules){ attribute :description, :id}
+
