@@ -6,6 +6,6 @@ angular.module('tacosApp', ['tacosApp.filters', 'tacosApp.services', 'tacosApp.d
     $routeProvider.when('/users', {templateUrl: parcial_path + 'users.html', controller: 'UserCtrl'});
     $routeProvider.when('/users/:action', {templateUrl: parcial_path + 'users.html', controller: 'UserCtrl'});
     $routeProvider.when('/teams', {templateUrl: parcial_path + 'teams.html', controller: 'TeamCtrl'});
-    $routeProvider.when('/teams/:team_id', {templateUrl: parcial_path + 'teams.html', controller: 'TeamDetailCtrl'});
+    $routeProvider.when('/teams/:teamId', {templateUrl: parcial_path + 'teams.html', controller: 'TeamDetailCtrl'});
     $routeProvider.otherwise({redirectTo: '/users'});
   }]);
